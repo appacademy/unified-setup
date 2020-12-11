@@ -82,7 +82,7 @@ the appropriate startup filename depending on which shell you have)
 code ~/.zshrc
 ```
 
-If you do not see the nvm srartup lines in your file already, add them in there.
+If you do not see the nvm startup lines in your file already, add them in there.
 
 There are two ways to run your startup file. You can run it live in your current
 shell by typing the `source` command and following it with your startup file, or
