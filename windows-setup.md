@@ -60,8 +60,8 @@ Next time you open the Ubuntu terminal it will start the virtual machine back up
 
 Now that you have WSL installed you can install all the rest of these tools:
 
-- Google Chrome
-- Visual Studio Code
-- Node.JS
-- Python
-- Docker
+- [Google Chrome](google-chrome-setup.md)
+- [Visual Studio Code](visual-studio-code-setup.md)
+- [Node.JS](nodejs-setup.md)
+- [Python](python-setup.md)
+- [Docker](docker-setup.md)
