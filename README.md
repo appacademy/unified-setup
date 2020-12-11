@@ -20,3 +20,8 @@ Chrome, Visual Studio Code, Node.JS, Python, and Docker.
 - [macOS Setup](macos-setup.md)
 - [Windows Setup](windows-setup.md)
 - [Ubuntu Setup](ubuntu-setup.md)
+
+After you have done your OS setup, be sure to check your setup for problems by
+reading this:
+
+[Checking your Setup](checking-your-setup.md)
