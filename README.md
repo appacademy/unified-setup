@@ -14,8 +14,8 @@ an overview of anything in particular you should be aware of for your system.
 From there you can proceed to the individual sections for installing Google
 Chrome, Visual Studio Code, Node.JS, Python, and Docker.
 
-> Important, if you have an Apple Silicon Mac be sure to read the Silicon Mac
-> Addendum before you start installing software.
+> Important, if you have an Apple Silicon Mac be sure to read the
+> [Apple Silicon Mac Addendum] before you start installing software.
 
 - [macOS Setup](macos-setup.md)
 - [Windows Setup](windows-setup.md)
@@ -25,3 +25,5 @@ After you have done your OS setup, be sure to check your setup for problems by
 reading this:
 
 [Checking your Setup](checking-your-setup.md)
+
+[Apple Silicon Mac Addendum]:(apple-silicon-mac-addendum.md)
