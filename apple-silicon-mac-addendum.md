@@ -1,17 +1,17 @@
 # Apple Silicon Macs and Software Development
 
-In November 2020, Apple release their first Macintosh computers running
-custom Apple designed Chips instead of using the Intel chips they had used
-in the prior decade. These chips run an architecture called ARM (Acorn Risc Machine)
+In November 2020, Apple releases their first Macintosh computers running
+custom Apple designed CPUs instead of using the Intel CPUs they had used
+in the prior decade. These CPUs run an architecture called ARM (Acorn Risc Machine)
 
 ## What is an architecture?
 
 At the lowest level, the CPU (Central Processing Unit) of a computer uses something
-called an _instruction set_ to actually do the work of runing programs.
+called an _instruction set_ to actually do the work of running programs.
 
 In this course we learn JavaScript and Python which are both _high-level languages_.
 
-So we don't have to worry about the instruction set of our CPUs do we? 
+So we don't have to worry about the instruction set of our CPUs do we?
 
 Not directly, but since we've had more than a decade of Apple computers using
 the Intel x86 instruction set (sometimes abbreviated x86, x64, x86_64 or i386)
@@ -22,10 +22,11 @@ You are in luck though! Your Apple Silicon based Mac has a piece of software
 called Rosetta 2 that will translate x86 instuctions into ARM instructions, and
 this is mostly transparent, although the software does run with about 70% of the
 performance of software compiled directly for ARM. So when possible we should
-try to use ARM native software as it will run faster.
+try to use ARM native software as it will run faster, but right now, we will
+be force to use Rosetta 2 for most of our tools.
 
 > Note this document will change often. As new software gets updated for Apple
-> Silicon this document will be ever evolving.
+> Silicon this document will be ever-evolving.
 
 ## Universal Apps
 
@@ -36,8 +37,12 @@ in macOS to determine if an apple is intel, arm or universal.
 
 ```shell
 file /bin/zsh
-
+/bin/zsh: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64e:Mach-O 64-bit executable arm64e]
+/bin/zsh (for architecture x86_64):     Mach-O 64-bit executable x86_64
+/bin/zsh (for architecture arm64e):     Mach-O 64-bit executable arm64e
 ```
+
+You can see zsh is universal since it lists both x86_64 and arm64e architectures.
 
 ## What this means for developers
 
@@ -48,7 +53,7 @@ we would like to run things in Rosetta or not from the command line.
 
 macOS ships with a command to do just that, the `arch` command.
 
-You can run it at anytime and it will print out the current architecture of 
+You can run it at anytime and it will print out the current architecture of
 your shell.
 
 ```shell
@@ -59,7 +64,7 @@ arm64
 If it prints `arm64` you are runnig natively on Apple Silicon. If it prints out
 `i386` you are running under Rosetta 2.
 
-You can also preface any command arch to force it to run under any particular 
+You can also preface any command with `arch` to force it to run under any particular
 architecture. For instance if we would like to run our shell `zsh` under Rosetta
 2 we can do this:
 
@@ -70,28 +75,27 @@ arch -x86_64 zsh
 This starts a brand new shell that is running in Rosetta 2. If you use the `arch` 
 command by itself now, you'll see it prints out `i386`.
 
-This is handy for when we want to run something in Rosetta 2, but how do we know
-if something has been converted to ARM or not yet?
+This is handy for when we want to run something in Rosetta 2.
 
 ## The workaround
 
 For now, as of December 2020, the recommended workaround for dealing with the
-confusion of runing things as arm or intel is to just mostly setup a Terminal
+confusion of runing things as arm or intel is to just setup a Terminal
 to run in Rosetta most of the time. This is guaranteed to work for all the
-software we use in the course, including Node.JS and Python.
+software we use in this course, including Node.JS and Python.
 
 In order to do this, open up your Applications folder on your Mac, then find
 the Utility folder and open that up.
 
-In this folder you will see the Terminal app. Right click on it and choose 
+In this folder you will see the Terminal app. Right click on it and choose
 "Duplicate". This will ask for your password.  When this is finished you will have
 two terminal apps.  Find the new one and rename it to something like `Rosetta Terminal`.
 
 Now right click on it and choose _Get Info_.  In the get info window check the box named
-"Run in Rosetta" and close the window.
+"Open using Rosetta" and close the window.
 
 Now you can put this Terminal on your Dock.  If you open this terminal and type
-`arch` you'll see it'll say `i386`.
+`arch` you'll see it will print `i386`.
 
 ### __Recommendation:__ Use this Rosetta Terminal now instead of the regular Terminal app.
 

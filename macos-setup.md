@@ -14,6 +14,7 @@ Install all of these pieces in order. There are separate readings for all of the
 
 * [Google Chrome](google-chrome-setup.md)
 * [Visual Studio Code](visual-studio-code-setup.md)
+* [Homebrew](homebrew-setup.md)
 * [Node.JS](nodejs-setup.md)
 * [Python](python-setup.md)
 * [Docker](docker-setup.md)
