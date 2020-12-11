@@ -49,5 +49,5 @@ To install VSCode in Ubuntu Linux, download the 64-bit .deb file to your Downloa
 folder, the open that folder in your File Manager and double click on it to
 install it.
 
-[wsl-extension]:(https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-[vs-code]:(https://code.visualstudio.com/)
+[wsl-extension]:https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+[vs-code]:https://code.visualstudio.com/

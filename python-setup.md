@@ -115,4 +115,4 @@ export PIPENV_VENV_IN_PROJECT=1
 Congratulations! If you've completed all these steps you are ready to code in
 Python!
 
-[pyenv-installer]:(https://github.com/pyenv/pyenv-installer)
+[pyenv-installer]:https://github.com/pyenv/pyenv-installer
