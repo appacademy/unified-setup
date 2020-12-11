@@ -26,4 +26,4 @@ reading this:
 
 [Checking your Setup](checking-your-setup.md)
 
-[Apple Silicon Mac Addendum]:(apple-silicon-mac-addendum.md)
+[Apple Silicon Mac Addendum]:apple-silicon-mac-addendum.md
