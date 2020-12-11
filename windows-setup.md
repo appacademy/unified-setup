@@ -65,3 +65,9 @@ Now that you have WSL installed you can install all the rest of these tools:
 - [Node.JS](nodejs-setup.md)
 - [Python](python-setup.md)
 - [Docker](docker-setup.md)
+
+## Video
+
+Watch this video walkthrough of the Windows 10 Setup
+
+[Windows 10 Setup](https://vimeo.com/489725118/c969434727)

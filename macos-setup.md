@@ -19,3 +19,9 @@ Install all of these pieces in order. There are separate readings for all of the
 * [Docker](docker-setup.md)
 
 [Apple Silicon addendum]:apple-silicon-mac-addendum.md
+
+## Video
+
+Watch this video walkthrough of the macOS Setup
+
+[macOS Setup](https://vimeo.com/489722391/d51ab2cd69)

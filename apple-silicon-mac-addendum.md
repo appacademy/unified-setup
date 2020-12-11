@@ -168,3 +168,9 @@ in the course, so hopefully this will be resolved by the time cohorts get to the
 Docker curriculum. We will keep owners of Apple Silicon Macs informed as the situation changes.
 
 ### __Recommendation:__ Do not install Docker for now
+
+## Video
+
+Watch this video walkthrough explaining Apple Silicon
+
+[Apple Silicon Setup](https://vimeo.com/489701378/9cbbbde806)
