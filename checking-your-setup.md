@@ -68,6 +68,6 @@ if some piece fails.
 If you get a failure and don't know how to fix it, feel free to post your output in
 Slack or to ask an instructor for help.
 
-> Note if you have an apple silicon mac, you can't install Docker, so except
+> Note if you have an apple silicon mac, you can't install Docker, so expect
 > that piece to always fail the check.
 
