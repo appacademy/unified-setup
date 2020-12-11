@@ -57,7 +57,13 @@ for python. These are listed on this page:
 [pyenv Prerequities](https://github.com/pyenv/pyenv/wiki/Common-build-problems)
 
 Since we are using Ubunut under Windows, you will just use the Ubuntu instructions
-and run this command:
+and run this command to update your apt repositories:
+
+```shell
+sudo apt update
+```
+
+and then run this command to install the packages listed on that page.
 
 ```shell
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
