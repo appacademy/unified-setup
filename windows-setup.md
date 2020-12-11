@@ -58,7 +58,8 @@ Next time you open the Ubuntu terminal it will start the virtual machine back up
 
 ## Install everything else
 
-Now that you have WSL installed you can install all the rest of these tools:
+Now that you have WSL installed you can install all the rest of these tools in
+this order:
 
 - [Google Chrome](google-chrome-setup.md)
 - [Visual Studio Code](visual-studio-code-setup.md)

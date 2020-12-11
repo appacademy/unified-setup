@@ -10,7 +10,7 @@ You need a mac running macOS Mojave or newer to follow these instructions.
 
 ## What to install
 
-Install all of these pieces in order. There are separate readings for all of these.
+Install all of these pieces in order.
 
 * [Google Chrome](google-chrome-setup.md)
 * [Visual Studio Code](visual-studio-code-setup.md)
