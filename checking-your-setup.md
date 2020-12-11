@@ -1,7 +1,7 @@
 # Checking your Setup
 
 Knowing if you've followed all the steps correctly can be tricky. There's
-so many things can go wrong, and everyone's computer is different. To help with
+so many things that can go wrong, and everyone's computer is different. To help with
 this problem, AppAcademy has created a script that checks your setup to verify
 it is done correctly.
 
