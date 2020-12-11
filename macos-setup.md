@@ -16,4 +16,4 @@ Install all of these pieces in order. There are separate readings for all of the
 * [Python](python-setup.md)
 * [Docker](docker-setup.md)
 
-[Apple Silicon addendum](apple-silicon-mac-addendum.md)
+[Apple Silicon addendum]:apple-silicon-mac-addendum.md
