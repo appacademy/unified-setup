@@ -16,3 +16,7 @@ Chrome, Visual Studio Code, Node.JS, Python, and Docker.
 
 > Important, if you have an Apple Silicon Mac be sure to read the Silicon Mac
 > Addendum before you start installing software.
+
+- [macOS Setup](macos-setup.md)
+- [Windows Setup](windows-setup.md)
+- [Ubuntu Setup](ubuntu-setup.md)
