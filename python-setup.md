@@ -74,13 +74,13 @@ xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 ## Installing python itself
 
 Now we are ready to install python. Look on python.org and find the latest version
-of Python 3.8.  (It's 3.8.6 as of this writing)
+of Python 3.9.  (It's 3.9.1 as of this writing)
 
 Then run this command to install python (you'll notice pyenv makes us put in the
-_exact_ version instead of being able to just say `3.8` or `3`)
+_exact_ version instead of being able to just say `3.9` or `3`)
 
 ```shell
-pyenv install 3.8.6
+pyenv install 3.9.1
 ```
 
 After some time this should complete without any errors. It could take a while
@@ -90,7 +90,7 @@ Once this is finished we also need to tell pyenv this is our default version
 of python using this command:
 
 ```shell
-pyenv global 3.8.6
+pyenv global 3.9.1
 ```
 
 We can verify our python is the correct version by typing
@@ -100,7 +100,7 @@ python --version
 python3 --version
 ```
 
-Both of these commands should show 3.8.6
+Both of these commands should show 3.9.1
 
 ## Pipenv
 
