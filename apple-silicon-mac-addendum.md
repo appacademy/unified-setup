@@ -1,6 +1,9 @@
 # Apple Silicon Macs and Software Development
 
-In November 2020, Apple releases their first Macintosh computers running
+> Note this document will change often. As new software gets updated for Apple
+> Silicon this document will be ever-evolving.
+
+In November 2020, Apple released their first Macintosh computers running
 custom Apple designed CPUs instead of using the Intel CPUs they had used
 in the prior decade. These CPUs run an architecture called ARM (Acorn Risc Machine)
 
@@ -18,17 +21,11 @@ the Intel x86 instruction set (sometimes abbreviated x86, x64, x86_64 or i386)
 much of the software we use hasn't been _compiled_ for the new Apple Silicon
 architecture called ARM (Acorn Risc Machines, sometimes abbreviated as arm64).
 
-You are in luck though! Your Apple Silicon based Mac has a piece of software
-called Rosetta 2 that will translate x86 instuctions into ARM instructions, and
-this is mostly transparent, although the software does run with about 70% of the
-performance of software compiled directly for ARM. So when possible we should
-try to use ARM native software as it will run faster, but right now, we will
-be force to use Rosetta 2 for most of our tools.
+Your Apple Silicon based Mac has a piece of software called Rosetta 2 that will translate x86 instuctions into ARM instructions, and this is mostly transparent, although the software does run with about 70% of the performance of software compiled directly for ARM.
 
-> Note this document will change often. As new software gets updated for Apple
-> Silicon this document will be ever-evolving.
+__Luckily as of March 2021, we don't have to use Rosetta 2 for most of our development tools.__
 
-## Universal Apps
+## A Note on Universal Apps
 
 Some apps are 'universal' on macOS. This means they've been compiled for BOTH
 Intel and ARM architectures, and the file for the app contains BOTH sets of
@@ -61,7 +58,7 @@ your shell.
 arm64
 ```
 
-If it prints `arm64` you are runnig natively on Apple Silicon. If it prints out
+If it prints `arm64` you are running natively on Apple Silicon. If it prints out
 `i386` you are running under Rosetta 2.
 
 You can also preface any command with `arch` to force it to run under any particular
@@ -77,104 +74,96 @@ command by itself now, you'll see it prints out `i386`.
 
 This is handy for when we want to run something in Rosetta 2.
 
-## The workaround
+However, as of March 2021, several improvments have been made to how homebrew, node and python work on Apple Silicon machines, and it is possible to install them as
+native ARM compiled binaries so we won't need to use Rosetta 2 much for our
+development.
 
-For now, as of December 2020, the recommended workaround for dealing with the
-confusion of runing things as arm or intel is to just setup a Terminal
-to run in Rosetta most of the time. This is guaranteed to work for all the
-software we use in this course, including Node.JS and Python.
+### Homebrew for ARM
 
-In order to do this, open up your Applications folder on your Mac, then find
-the Utility folder and open that up.
+If you run the homebrew installer on an M1 Mac. Homebrew will install the ARM version of homebrew into the `/opt/homebrew` folder instead of the usual `/usr/local` folder used on Intel macs.  So follow the normal instructions for setting
+up Homebrew on macOS.
 
-In this folder you will see the Terminal app. Right click on it and choose
-"Duplicate". This will ask for your password.  When this is finished you will have
-two terminal apps.  Find the new one and rename it to something like `Rosetta Terminal`.
+### Python 3.9 and ARM
 
-Now right click on it and choose _Get Info_.  In the get info window check the box named
-"Open using Rosetta" and close the window.
+Python 3.9 will compile under ARM, so we mostly use the regular macOS instructions
+to install it, however....
 
-Now you can put this Terminal on your Dock.  If you open this terminal and type
-`arch` you'll see it will print `i386`.
+Python 3.9 needs homebrew ARM versions of `openssl` and `readline` installed.
 
-### __Recommendation:__ Use this Rosetta Terminal now instead of the regular Terminal app.
+We can install these with homebrew:
 
-## The Future
+```shell
+brew install openssl readline
+```
 
-In the future we fully expect all software to be compiled for Apple Silicon.
-If history is any indication, eventually Rosetta 2 will be removed from some
-future version of macOS in the next few years.
+After this you can install the ARM version of python 3.9 (substitute the latest 3.9 version here)
 
-Once this happens, your Rosetta 2 terminal and all the intel software you've
-installed will probably need to be uninstalled and replaced with ARM versions.
+```shell
+pyenv install 3.9.1
+```
 
-The good thing about this is your software will get 30% faster!
+Compiling python from source can take quite a while.
+
+You can check what architecture your python is compiled with by running
+this at the python REPL once Python is installed.
+
+```python
+>>> import platform
+>>> platform.machine()
+'arm64'
+```
+
+### Node.JS and ARM
+
+Node.JS 12 and 14 have both been updated to compile correctly on Apple Silicon.
+
+Node.JS will compile under ARM when you try to install it under nvm but
+ONLY if your python is ALSO compiled as ARM. (This is because the Node.JS compile process uses python scripts to determine the architecture.)
+
+So make sure you do the python install first.
+
+```nvm install 12```
+
+You can verify what architecture your node is compiled for by starting the Node.JS REPL and typing the following:
+
+```js
+> os.arch();
+'arm64'
+```
+
+*Note: This will take longer to install since it must compile Node.JS.*
 
 ## Google Chrome
 
 Google Chrome already has an Apple Silicon version of itself. You should definitely
 install this version when downloading Chrome.
 
-### __Recommendation:__ Install the Apple Chip version of Chrome.
+### __Recommendation:__ Install the Apple Chip version of Chrome
 
 ## Visual Studio Code
 
-As of now, in December 2020, the Stable and Insider versions of VSCode are not
-compiled for ARM.  However there is an Exploration version on the VSCode site
-that is compiled for ARM and the peformance of it is significantly better than
-the Intel version under Rosetta 2.  Feel free to try this version out, but be
-aware that the arch command will return `arm64` when running that version.
+As of March 2021, the Stable version of VSCode is not compiled for ARM.  However the Insider version of VSCode is compiled for ARM and the peformance of it is significantly better than the Intel version under Rosetta 2.  
 
-This means that the integrated terminal in VSCode will be like running the regular
-terminal and not the Rosetta Terminal.  In the stable version the `arch` command
-in the interated terminal returns `i386`.
+Also If you run the stable version of VSCode, be aware that the integrated terminal
+in VSCode will run under Rosetta, and software you compile and install may
+be compiled for intel. (You can run the `arch` command in this terminal to verify this)
 
-Things are changing fast though, and I expect VSCode to be updated for Apple
-Silicon in a few months.
+Because of this, we recommend you use the Insider version of VSCode.
 
-### __Recommendation:__ Install the stable version of VSCode which uses Rosetta.
+[VSCode Insider Downloads](https://code.visualstudio.com/insiders/)
 
-## Homebrew
-
-Homebrew works under Apple Silicon but there are some things to know about it.
-
-Currently the Homebrew maintainers are recommending you only run homebrew under
-Rosetta. This means either prefacing all `brew` commands with `arch -x86_64` 
-or only running them inside your Rosetta Terminal application.
-
-There is an ARM version of homebrew in the works, however it installs into a
-different path on your system.
-
-Homebrew install installs into `/usr/local` while homebrew for ARM installs in 
-`/opt/homebrew`.
-
-### __Recommendation:__ Use the Rosetta Terminal you created for all homebrew installs.
-
-## Node.JS
-
-Node.JS installs fine using `nvm` in a Rosetta Terminal.  Node 12 and 14 do
-not currently compile in an ARM terminal. Node 15 (experimental) does compile 
-and work on ARM.
-
-### __Recommendation:__ Install nvm and node 12 in a Rosetta Terminal
-
-## Python
-
-Python does not currently compile on Apple Silicon. This means you need to 
-compile it under Rosetta.
-
-### __Recommendation:__ Install pyenv and python in a Rosetta Terminal
+Things are changing fast though, and we expect stable VSCode to be updated for Apple Silicon in a few months.
 
 ### Docker
 
-Docker currently does not work _AT ALL_ on Apple Silicon. We do not use Docker until later
-in the course, so hopefully this will be resolved by the time cohorts get to the
-Docker curriculum. We will keep owners of Apple Silicon Macs informed as the situation changes.
+Docker is available for Apple Silicon but is currently a "Technical Preview" version.
 
-### __Recommendation:__ Do not install Docker for now
+You can download it from this location:
 
-## Video
+[Docker Apple M1 Tech Preview](https://docs.docker.com/docker-for-mac/apple-m1/)
 
-Watch this video walkthrough explaining Apple Silicon
+*Note: This version will not automatically update, so you may need to check
+this page for new versions until the official Docker desktop install supports 
+Apple Silicon*
 
-[Apple Silicon Setup](https://vimeo.com/489701378/9cbbbde806)
+### __Recommendation:__ Install the docker tech preview
