@@ -142,17 +142,12 @@ install this version when downloading Chrome.
 
 ## Visual Studio Code
 
-As of March 2021, the Stable version of VSCode is not compiled for ARM.  However the Insider version of VSCode is compiled for ARM and the peformance of it is significantly better than the Intel version under Rosetta 2.  
+Visual Studio Code is available compiled as either Intel, Apple Silicon or as a Universal App.
 
-Also If you run the stable version of VSCode, be aware that the integrated terminal
-in VSCode will run under Rosetta, and software you compile and install may
-be compiled for intel. (You can run the `arch` command in this terminal to verify this)
+You can install either the Apple Silicon or Universal Version and it will work fine
+on your Apple Silicon based Mac.
 
-Because of this, we recommend you use the Insider version of VSCode.
-
-[VSCode Insider Downloads](https://code.visualstudio.com/insiders/)
-
-Things are changing fast though, and we expect stable VSCode to be updated for Apple Silicon in a few months.
+### __Recomendation:__ Install the Apple Silicon or Universal Version
 
 ### Docker
 
