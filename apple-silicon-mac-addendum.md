@@ -99,7 +99,7 @@ brew install openssl readline
 After this you can install the ARM version of python 3.9 (substitute the latest 3.9 version here)
 
 ```shell
-pyenv install 3.9.1
+pyenv install 3.9.4
 ```
 
 Compiling python from source can take quite a while.
