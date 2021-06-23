@@ -26,23 +26,73 @@ curl https://pyenv.run | bash
 Unlike `nvm`, `pyenv` does not automatically add it's startup lines to your
 shell startup file.
 
-Remember, if your shell is `zsh` your startup file will be `~/.zshrc`
-If you shell is `bash` your startup file will be `~/.bashrc`
+The files that you have to change will depend on which shell you are running (you 
+can check which shell you have by running `echo $SHELL`). Follow the instructions
+to update the startup files associated with the shell that you are running.
 
-You can check which shell you have by running `echo $SHELL`
-
-Open up the correct file for your system by using VSCode.
-
+### If your shell is `zsh`
+1. Open up your `.profile` file with the following command.
+```shell
+code ~/.profile
+```
+2. Add the following lines to your `.profile`.
+```shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+```
+3. Open up your `.zprofile` file with the following command.
+```shell
+code ~/.zprofile
+```
+4. Add the following lines to your `.zprofile`. (Yes, these are the same as above.)
+```shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+```
+5. Open your `.zshrc` with the following command
 ```shell
 code ~/.zshrc
 ```
-
-and add the lines pyenv told you to add.
-
+6. Add the following line.
 ```shell
-export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+```
+
+### If your shell is `bash`
+1. Open up your `.profile` file with the following command.
+```shell
+code ~/.profile
+```
+2. Add the following lines.
+```shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+```
+3. Check if you have a `.bash_profile`. Run the following at the command line if you don't know.
+```shell
+if [ -f ~/.bash_profile ]; then echo "bash_profile exists"; else echo "bash_profile does not exist"; fi
+```
+If you don't have a `.bash_profile`, you can skip the rest of this step. If
+you do, open up your `.bash_profile` file with the following command.
+```shell
+code ~/.bash_profile
+```
+4. Add the following lines to your `.bash_profile`. (Yes, these are the same as above.)
+```shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+```
+5. Open your `.bashrc` with the following command
+```shell
+code ~/.bashrc
+```
+6. Add the following line.
+```shell
+eval "$(pyenv init -)"
 ```
 
 To get your startup file to execute, restart your terminal.
@@ -52,18 +102,15 @@ To get your startup file to execute, restart your terminal.
 If you use macOS you can skip this step.
 
 For Windows and Ubuntu users you will need to install some extra dependencies
-for python. These are listed on this page:
+for python. (See here for more information about the prerequisites: [pyenv Prerequities](https://github.com/pyenv/pyenv/wiki/Common-build-problems))
 
-[pyenv Prerequities](https://github.com/pyenv/pyenv/wiki/Common-build-problems)
-
-Since we are using Ubunut under Windows, you will just use the Ubuntu instructions
-and run this command to update your apt repositories:
+First run this command to update your apt repositories:
 
 ```shell
 sudo apt update
 ```
 
-and then run this command to install the packages listed on that page.
+and then run this command to install the packages listed on the pyenv.
 
 ```shell
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -73,8 +120,7 @@ xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 
 ## Installing python itself
 
-Now we are ready to install python. Look on python.org and find the latest version
-of Python 3.9.  (It's 3.9.4 as of this writing)
+Now we are ready to install python. We will be installing Python version 3.9.4.
 
 Then run this command to install python (you'll notice pyenv makes us put in the
 _exact_ version instead of being able to just say `3.9` or `3`)
@@ -93,7 +139,8 @@ of python using this command:
 pyenv global 3.9.4
 ```
 
-We can verify our python is the correct version by typing
+Ensure that these changes take effect by closing your terminal and opening 
+a new one. Then, we can verify our python is the correct version by typing
 
 ```shell
 python --version
@@ -111,8 +158,9 @@ this is right now, it's just enough to install it.
 pip install pipenv
 ```
 
-Then after you have installed pipenv, add this line to your shell startup file
-somewhere after the pyenv lines.
+Then after you have installed pipenv, add this line to your shell startup
+file (either your `.bashrc` or your `.zshrc`) somewhere after 
+the  `eval "$(pyenv init -)"`.
 
 ```shell
 export PIPENV_VENV_IN_PROJECT=1
