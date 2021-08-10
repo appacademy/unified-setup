@@ -151,14 +151,8 @@ on your Apple Silicon based Mac.
 
 ### Docker
 
-Docker is available for Apple Silicon but is currently a "Technical Preview" version.
+Docker is generally available for Apple Silicon. You can install it by downloading docker desktop from this location:
 
-You can download it from this location:
+[Docker Desktop for M1](https://www.docker.com/products/docker-desktop)
 
-[Docker Apple M1 Tech Preview](https://docs.docker.com/docker-for-mac/apple-m1/)
-
-*Note: This version will not automatically update, so you may need to check
-this page for new versions until the official Docker desktop install supports 
-Apple Silicon*
-
-### __Recommendation:__ Install the docker tech preview
+### __Recommendation:__ Install the Docker Desktop for Mac with Apple Chip
