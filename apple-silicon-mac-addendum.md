@@ -144,7 +144,7 @@ install this version when downloading Chrome.
 
 Visual Studio Code is available compiled as either Intel, Apple Silicon or as a Universal App.
 
-You can install either the Apple Silicon or Universal Version and it will work fine
+You can install either the Apple Silicon or Universal Version and it will work well
 on your Apple Silicon based Mac.
 
 ### __Recomendation:__ Install the Apple Silicon or Universal Version
