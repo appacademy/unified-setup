@@ -52,7 +52,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 MacOS has a built in password/secret manager called keychain. We can tell git to use keychain with the following line in our terminal:
 
 ```shell
-$ git config --global credential.helper osxkeychain
+git config --global credential.helper osxkeychain
 ```
 
 ### Personal Access Token
