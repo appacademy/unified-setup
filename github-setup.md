@@ -48,6 +48,12 @@ WSL doesn't have a password manager by default in most distributions so we would
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 ```
 
+We now have WSL trying to use the git-credential-manager-core to facilitate our credentials management. The only problem is we don't have that installed. It comes bundled with git though so we can easily install it in Windows by using the installer found [here](https://git-scm.com/download/win). 
+
+Once you've downloaded one of the "Git for Windows Setup" distributions (either 32-bit or more likely 64-bit) you can launch the installer and accept all the defaults. 
+
+Now that git-credential-manager-core is installed, we can restart our terminal and utilize it. 
+
 #### Mac
 MacOS has a built in password/secret manager called keychain. We can tell git to use keychain with the following line in our terminal:
 
@@ -66,4 +72,4 @@ Once our secret manager is setup, we want to **restart our terminal/WSL Shell**.
 
 > Once we have our token ready to generate, we want to try running a privileged command in git so we get a password prompt. Once we click **Generate token** at the bottom of the *new token form* we will only be able to see the token once. 
 
-4. Now that we have our token, we can use it when git prompts us for a password. Because we previously configured our password/secret manager, our input will be saved for us. This way, we don't need to keep track of our PAT. 
+4. Now that we have our token, we can use it when git prompts us for a password. If you are on Windows, you won't receive a password prompt but instead you will receive a pop-up that asks for you Personal Access Token. Because we previously configured our password/secret manager, our input will be saved for us. This way, we don't need to keep track of our PAT. 
