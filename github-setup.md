@@ -16,7 +16,13 @@ Github is a company that provides hosting for git repos. It works together with 
 
 ## Installing git
 ### Windows
-If you have WSL already setup and are using an Ubuntu distribution, you already have git! If you are using a different distribution you may need to manually install git.
+If you have WSL already setup and are using an Ubuntu distribution, you already have git within linux! If you are using a different distribution you may need to manually install git. 
+
+While we don't need git installed in Windows, we do want to have the git-credential-manager-core installed. It comes bundled with git so we can easily install it in Windows by using the installer found [here](https://git-scm.com/download/win). 
+
+Once you've downloaded one of the "Git for Windows Setup" distributions (either 32-bit or more likely 64-bit) you can launch the installer and accept all the defaults. 
+
+Now that git-credential-manager-core is installed, we can restart our terminal and continue on working through this guide.
 
 ### Mac
 Mac comes with some tools by default. git is one that we want to make sure is up to date so we can run the following in our terminal. 
@@ -48,11 +54,7 @@ WSL doesn't have a password manager by default in most distributions so we would
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 ```
 
-We now have WSL trying to use the git-credential-manager-core to facilitate our credentials management. The only problem is we don't have that installed. It comes bundled with git though so we can easily install it in Windows by using the installer found [here](https://git-scm.com/download/win). 
-
-Once you've downloaded one of the "Git for Windows Setup" distributions (either 32-bit or more likely 64-bit) you can launch the installer and accept all the defaults. 
-
-Now that git-credential-manager-core is installed, we can restart our terminal and utilize it. 
+We now have WSL trying to use the git-credential-manager-core to facilitate our credentials management. 
 
 #### Mac
 MacOS has a built in password/secret manager called keychain. We can tell git to use keychain with the following line in our terminal:
