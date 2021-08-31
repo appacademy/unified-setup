@@ -77,4 +77,4 @@ Once our secret manager is setup, we want to **restart our terminal/WSL Shell**.
 4. Now that we have our token, we can use it when git prompts us for a password. If you are on Windows, you won't receive a password prompt but instead you will receive a pop-up that asks for you Personal Access Token. Because we previously configured our password/secret manager, our input will be saved for us. This way, we don't need to keep track of our PAT.
 
 ### Still having trouble?
-We can make use of another form of authentication, however you may run into some unanticipated issues depending on your network setup. If you'd like to explore this option, please checkout [this guide]
+We can make use of another form of authentication, however you may run into some unanticipated issues depending on your network setup. If you'd like to explore this option, please checkout [this guide](https://hackmd.io/cZQaolzKS0iEK9bkJYSWgA)
