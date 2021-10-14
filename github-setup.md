@@ -119,8 +119,6 @@ that as our authentication for a privileged command.
 
 2. Once here, click **Generate new token**.
 
-3. Give your token a descriptive name. I name it for what device I will use the token from. This way, all of my computers have their own unique token and if I ever need to, I can revoke a token. We also want to use this menu to set when our token expires and give it the allowed permissions. For out purposes we want to at least have all the repo permissions.
-
 3. Give your token a descriptive name. I name it for what device I will use the
    token from. This way, all of my computers have their own unique token and if
    I ever need to, I can revoke a token. We also want to use this menu to set
@@ -140,3 +138,7 @@ that as our authentication for a privileged command.
 
 [git-win]: https://git-scm.com/download/win
 [PAT]: https://github.com/settings/tokens
+
+### Still having trouble?
+If you have trouble with this setup or a preference for SSH you can follow
+[this guide](github-ssh-setup.md)
