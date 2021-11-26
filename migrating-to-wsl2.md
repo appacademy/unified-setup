@@ -1,11 +1,11 @@
 # Migrating from WSL1 to WSl2
 
 ## Steps
-1. [Install/Enable WSL2](./migrating-to-wsl2.md/#Install\/Enable-WSL2)
+1. [Install/Enable WSL2](./migrating-to-wsl2.md/#installenable-wsl2)
 2. [Install new Ubuntu Distro](./migrating-to-wsl2.md/#Install-new-Ubuntu-Distro)
 3. [Configure Software for the new VM](./migrating-to-wsl2.md/#Configure-Software-for-the-new-VM)
 4. [Migrate data to new Distro](./migrating-to-wsl2.md/#Migrate-data-to-new-Distro)
-5. [Change file/folder permissions](./migrating-to-wsl2.md/#Change-file\/folder-permissions)
+5. [Change file/folder permissions](./migrating-to-wsl2.md/#change-filefolder-permissions)
 
 ### Install/Enable WSL2
 To install WSL1 you previously ran the following command in Powershell: 
