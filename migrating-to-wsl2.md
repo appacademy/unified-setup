@@ -1,5 +1,7 @@
 # Migrating from WSL1 to WSl2
 
+**Note:** There is a WSL Runtime that is distributed through the Windows Store. This is still in preview and not reliable. If a students terminal window says "Windows Subsystem for Linux [Preview]" it likely means that they are using the WSL Runtime from the Microsoft Store. Uninstall this before following the steps below. (It's treated like a normal Windows Application in settings) 
+
 ## Steps
 1. [Install/Enable WSL2](./migrating-to-wsl2.md/#installenable-wsl2)
 2. [Install new Ubuntu Distro](./migrating-to-wsl2.md/#Install-new-Ubuntu-Distro)
@@ -59,4 +61,4 @@ chown -R $USER DIRECTORY
 Where `DIRECTORY` is any folders with files you wish to take ownership of. 
 
 
-> instalation of WSL2 sourced from [here](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
+> installation of WSL2 sourced from [here](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
