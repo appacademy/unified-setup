@@ -57,3 +57,6 @@ chown -R $USER DIRECTORY
 ```
 
 Where `DIRECTORY` is any folders with files you wish to take ownership of. 
+
+
+> instalation of WSL2 sourced from [here](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
