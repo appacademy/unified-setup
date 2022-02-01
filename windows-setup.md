@@ -71,4 +71,4 @@ this order:
 
 Watch this video walkthrough of the Windows 10 Setup
 
-[Windows 10 Setup](https://vimeo.com/489725118/c969434727)
+[Windows 10 Setup](https://player.vimeo.com/video/489725118)
