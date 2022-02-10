@@ -25,4 +25,4 @@ Install all of these pieces in order.
 
 Watch this video walkthrough of the macOS Setup
 
-[macOS Setup](https://vimeo.com/489722391/d51ab2cd69)
+[macOS Setup](https://player.vimeo.com/video/489722391)
