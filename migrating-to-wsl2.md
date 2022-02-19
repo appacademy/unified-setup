@@ -26,7 +26,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 WSL2 should now be configured. Now we want to instruct newly installed Distros to utilize WSL2 instead by running the following Powershell command:
 
 ```Powershell
-https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+wsl --set-default-version 2
 ```
 
 ### Install new Ubuntu Distro
