@@ -97,8 +97,9 @@ shell startup files.
 Now that we have nvm installed and ready to go, we can use it to install a
 particular version of Node.JS.
 
-Currently in this course, we use version 12 of Node.JS.  Version 14 is out
-but not all of the curriculum has been tested to work on Node.JS 14.
+Currently in this course, we use version 16. While 14 and 12 should work as 
+well, they are missing newer language features that you may come accross
+and would like to use. 
 
 > Note only stick to LTS versions of Node.JS. This stands for Long Term Support.
 > These are the stable versions of Node.JS. The Odd numbered releases such as 15
@@ -109,24 +110,24 @@ but not all of the curriculum has been tested to work on Node.JS 14.
 So let's install it!
 
 ```shell
-nvm install 12
+nvm install 16
 ```
 
 You should see something like this:
 
 ```shell
-Downloading and installing node v12.20.0...
-Downloading https://nodejs.org/dist/v12.20.0/node-v12.20.0-linux-x64.tar.xz...
-################################################################################################################################################################################################### 100.0%
-Computing checksum with sha256sum
+Downloading and installing node v16.14.0...
+Downloading https://nodejs.org/dist/v16.14.0/node-v16.14.0-darwin-arm64.tar.xz...
+######################################################################### 100.0%
+Computing checksum with shasum -a 256
 Checksums matched!
-Now using node v12.20.0 (npm v6.14.8)
-Creating default alias: default -> 12 (-> v12.20.0)
+Now using node v16.14.0 (npm v8.3.1)
+Creating default alias: default -> 16 (-> v16.14.0)
 ```
 
-You'll notice we can just provide `12` here and not any specific version of
-Node.JS like `12.20.0`. nvm is good like that, it will automatically install
-the latest version of `12`.
+You'll notice we can just provide `16` here and not any specific version of
+Node.JS like `16.14.0`. nvm is good like that, it will automatically install
+the latest version of `16`.
 
 Once this is complete, you should be able to type
 
@@ -146,7 +147,7 @@ which node
 If it prints out a path with .nvm in it, then you've done it correctly!
 
 ```shell
-/home/<<your username>>/.nvm/versions/node/v12.20.0/bin/node
+/home/<<your username>>/.nvm/versions/node/v16.14.0/bin/node
 ```
 
 Congratulations you've just installed Node.JS!
