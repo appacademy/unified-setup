@@ -43,38 +43,15 @@ eval "$(pyenv init --path)"
 ```
 
 ### If your shell is `bash`
-1. Open up your `.profile` file with the following command.
+1. Open your `.bashrc` with the following command
 ```shell
-code ~/.profile
+code ~/.bashrc
 ```
 2. Add the following lines.
 ```shell
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
-```
-3. Check if you have a `.bash_profile`. Run the following at the command line if you don't know.
-```shell
-if [ -f ~/.bash_profile ]; then echo "bash_profile exists"; else echo "bash_profile does not exist"; fi
-```
-If you don't have a `.bash_profile`, you can skip the rest of this step. If
-you do, open up your `.bash_profile` file with the following command.
-```shell
-code ~/.bash_profile
-```
-4. Add the following lines to your `.bash_profile`. (Yes, these are the same as above.)
-```shell
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-```
-5. Open your `.bashrc` with the following command
-```shell
-code ~/.bashrc
-```
-6. Add the following line.
-```shell
-eval "$(pyenv init -)"
 ```
 
 To get your startup file to execute, restart your terminal.
