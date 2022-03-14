@@ -31,33 +31,15 @@ can check which shell you have by running `echo $SHELL`). Follow the instruction
 to update the startup files associated with the shell that you are running.
 
 ### If your shell is `zsh`
-1. Open up your `.profile` file with the following command.
-```shell
-code ~/.profile
-```
-2. Add the following lines to your `.profile`.
-```shell
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-```
-3. Open up your `.zprofile` file with the following command.
-```shell
-code ~/.zprofile
-```
-4. Add the following lines to your `.zprofile`. (Yes, these are the same as above.)
-```shell
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-```
-5. Open your `.zshrc` with the following command
+1. Open your `.zshrc` with the following command
 ```shell
 code ~/.zshrc
 ```
-6. Add the following line.
+2. Add the following lines.
 ```shell
-eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 ```
 
 ### If your shell is `bash`
