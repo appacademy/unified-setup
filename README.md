@@ -1,3 +1,9 @@
+# Deprecation Notice
+
+**As of 5/20/22, this repository will no longer be updated. Please use the setup 
+instructions at [this repository](https://github.com/appacademy/practice-for-SETUP-unified-setup) 
+instead.**
+
 # Setting up your computer for AppAcademy
 
 In order to be successful in the course it's good that your computer be setup
