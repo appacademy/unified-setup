@@ -66,7 +66,7 @@ know that it is an option.) You will also want to set the default branch to
 In your terminal (on Mac or WSL), run
 
 ```shell
-git config --global user.name "Your Name" 
+git config --global user.name "Your Name"
 git config --global user.email "Your Email"
 git config --global init.defaultBranch main
 ```
@@ -117,7 +117,7 @@ that as our authentication for a privileged command.
    settings. You can navigate there yourself by going to `settings > Developer
    settings > Personal Access Tokens`.
 
-2. Once here, click **Generate new token**. 
+2. Once here, click **Generate new token**.
 
 3. Give your token a descriptive name. I name it for what device I will use the
    token from. This way, all of my computers have their own unique token and if
@@ -138,3 +138,7 @@ that as our authentication for a privileged command.
 
 [git-win]: https://git-scm.com/download/win
 [PAT]: https://github.com/settings/tokens
+
+### Still having trouble?
+If you have trouble with this setup or a preference for SSH you can follow
+[this guide](github-ssh-setup.md)
