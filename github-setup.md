@@ -35,7 +35,7 @@ If you have WSL already setup and are using an Ubuntu distribution, you already
 have git within linux! If you are using a different distribution you may need to
 manually install git. 
 
-While we don't need git installed in Windows, we do want to have the
+<!-- While we don't need git installed in Windows, we do want to have the
 git-credential-manager-core installed. It comes bundled with git so we can
 easily install it in Windows by using the installer found
 [here][git-win]. 
@@ -45,7 +45,7 @@ Once you've downloaded one of the "Git for Windows Setup" distributions (either
 defaults. 
 
 Now that git-credential-manager-core is installed, we can restart our terminal
-and continue on working through this guide.
+and continue on working through this guide. -->
 
 ### Mac
 Mac comes with some tools by default. git is one that we want to make sure is up
@@ -83,6 +83,16 @@ Personal Access Token as a password to authenticate to Github and save it in a
 password manager of sorts so we don't have to use the PAT every command that
 requires auth. 
 
+### Github Authentication
+Below, we'll find some instructions for setting up authentication on either Mac
+or Windows. Currently, it is recommended for both WSL and MacOS users to
+[follow this guide](./gcm-setup.md) and set up Git Credential Manager (GCM) on
+their machines. GCM provides a unified authentication experience that 
+integrates into native security features offered by your operating system.
+
+While the instructions below _will_ provide a workable result, GCM offers a 
+more streamlined and hassle-free solution.
+
 ### Secrets Manager
 Before we get a PAT from Github and use it for auth - we should setup our
 Secrets Manager. 
@@ -90,8 +100,21 @@ Secrets Manager.
 #### Windows
 WSL doesn't have a password manager by default in most distributions so we would
 need to install one if we don't want our token saved in plain text or only
-temporarily in memory. Thankfully, we can actually tell git to use Windows
-Credential Manager. Just run the following command in WSL:
+temporarily in memory. 
+
+While we don't need git installed in Windows, we do want to have the
+git-credential-manager-core installed. It comes bundled with git so we can
+easily install it in Windows by using the installer found
+[here][git-win]. 
+
+Once you've downloaded one of the "Git for Windows Setup" distributions (either
+32-bit or more likely 64-bit) you can launch the installer and accept all the
+defaults. 
+
+Now that git-credential-manager-core is installed, we can restart our terminal
+and continue on working through this guide. Once we've finished with the Git 
+for Windows install, we can make use of the credential manager in our terminal
+by entering the following command in WSL:
 
 ```shell 
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
