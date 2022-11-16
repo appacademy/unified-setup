@@ -159,7 +159,7 @@ this.  We will use it to test in our projects and also when you do assessments.
 
 To install it we use the `npm` command.
 
-> NOTE: DO NOT confuse `npm` with `nvm`. They are different tools. nvm controls
+> NOTE: DO NOT confuse `npm` with `nvm`. They are different tools. `nvm` controls
 > the version of Node.JS you have installed, while `npm` is responsible for
 > installing Node Packages which are third party pieces of software written
 > in JavaScript.
