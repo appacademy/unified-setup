@@ -180,5 +180,5 @@ You can verify mocha works by typing
 
 `mocha --version`
 
-If it prints out a version number, pay yourself on the back, you have successfully
+If it prints out a version number, pat yourself on the back, you have successfully
 installed Node.JS and Mocha!
